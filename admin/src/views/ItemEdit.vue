@@ -1,6 +1,6 @@
 <template>
  <div class="about">
-  <h1>{{ id ? "编辑物品" : "新建物品" }}</h1>
+  <h1>{{ id ? "编辑" : "新建" }}物品</h1>
   <el-form label-width="120px" @submit.native.prevent="save">
    <el-form-item label="名称">
     <el-input v-model="model.name"></el-input>
@@ -39,7 +39,7 @@ export default {
  },
  methods: {
   afterUpload(res) {
-      this.$set(this.model,'icon',res.url)
+   this.$set(this.model, "icon", res.url);
   },
   async save() {
    let res;
