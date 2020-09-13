@@ -147,6 +147,7 @@ export default {
    model: {
     name: "",
     avatar: "",
+    skills:[],
     scores: {
      difficult: 0
     }
